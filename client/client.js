@@ -1,4 +1,5 @@
 var port = 28888;
+var heartInterval = 25000;
 
 var frontpage = [
   "实时聊天应用，无消息记录",
@@ -51,7 +52,7 @@ var lastSentPos = 0;
 // Ping server every 50 seconds to retain WebSocket connection
 window.setInterval(function () {
   send({ cmd: "ping" });
-}, 50000);
+}, heartInterval);
 
 function join(channel) {
   if (document.domain == "hack.chat") {
