@@ -1,0 +1,25 @@
+# doc
+/doc
+
+
+# site
+/site/node_modules
+/site/build
+
+# server
+/server/node_modules
+
+# misc
+.DS_Store
+.env
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock*
+
+
+*.zip
+
+
+secret.md
