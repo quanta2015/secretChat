@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8" />
+    <title>hack.chat</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="katex/katex.min.css" />
+    <link id="scheme-link" rel="stylesheet" href="schemes/android.css" />
+    <script src="katex/katex.min.js"></script>
+    <script src="katex/contrib/auto-render.min.js"></script>
+  </head>
+  <body>
+    <article class="container"><div id="messages" class="messages"></div></article>
+    <footer id="footer">
+      <div class="container">
+        <form id="chatform" class="messages">
+          <textarea id="chatinput" type="text" autocomplete="off" autofocus></textarea>
+          <div id="send-button" type="submit">发送</div>
+        </form>
+      </div>
+    </footer>
+    <nav id="sidebar">
+      <div id="sidebar-content" class="hidden">
+        <p class="hide"><input id="pin-sidebar" type="checkbox" /><label for="pin-sidebar">Pin sidebar</label></p>
+        <h4>设置</h4>
+        <p class="hide">
+          <input id="joined-left" type="checkbox" checked /><label for="joined-left">Join/left notify</label>
+        </p>
+        <p class="hide">
+          <input id="parse-latex" type="checkbox" checked /><label for="parse-latex">Parse LaTeX</label>
+        </p>
+        <p><button id="clear-messages">清空历史聊天</button></p>
+        <h4 class="hide">Color scheme</h4>
+        <select id="scheme-selector" class="hide"></select>
+        <h4>在线用户(点击私聊)</h4>
+        <ul id="users"></ul>
+      </div>
+    </nav>
+    <script src="client.js"></script>
+  </body>
+</html>
